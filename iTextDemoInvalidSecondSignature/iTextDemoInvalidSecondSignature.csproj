@@ -120,6 +120,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DigestCalcBlankSigner.cs" />
+    <Compile Include="MyPdfDocument.cs" />
+    <Compile Include="MyPdfSigner.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadySignatureSigner.cs" />

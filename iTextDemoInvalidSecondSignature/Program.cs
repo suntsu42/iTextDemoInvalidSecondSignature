@@ -79,7 +79,7 @@ namespace iTextDemoInvalidSecondSignature
                     sp.UseAppendMode();
                     using (MemoryStream baos = new MemoryStream())
                     {
-                        var signer = new PdfSigner(reader, baos, sp);
+                        var signer = new MyPdfSigner(reader, baos, sp);
 
                         //Has to be NOT_CERTIFIED since otherwiese a pdf cannot be signed multiple times
                         signer.SetCertificationLevel(PdfSigner.NOT_CERTIFIED);
@@ -109,7 +109,7 @@ namespace iTextDemoInvalidSecondSignature
                         {
                             using (MemoryStream outStream = new MemoryStream())
                             {
-                                PdfSigner.SignDeferred(docToSign, SignatureAttributeName, outStream, extSigContainer);
+                                MyPdfSigner.SignDeferred(docToSign, SignatureAttributeName, outStream, extSigContainer);
                                 return outStream.ToArray();
                             }
                         }
